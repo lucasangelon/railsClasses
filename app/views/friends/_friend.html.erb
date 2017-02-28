@@ -1,4 +1,6 @@
 <%# This is our "friend" partial. %>
+<p>Starting "Friend" Partial \/</p>
+
 <% if friend %>
   <h2>Character: <%= friend.first_name + ' ' + friend.last_name %></h2>
 
@@ -15,3 +17,14 @@
   <%# Debugging via to_yaml %>
   <%= simple_format friend.to_yaml %>
 <% end %>
+
+<ul>
+  <li><%= link_to('Ross', friends_ross_path) %></li>
+  <li><%= link_to('Monica', friends_monica_path) %></li>
+  <li><%= link_to('Rachel', friends_rachel_path) %></li>
+  <li><%= link_to('Phoebe', friends_phoebe_path) %></li>
+  <li><%= link_to('Chandler', friends_chandler_path) %></li>
+  <li><%= link_to('Joey', friends_joey_path) %></li>
+</ul>
+
+<p>Ending "Friend" Partial /\</p>
