@@ -1,24 +1,14 @@
-# README
+# RailsClasses Sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+So, in order to run this project:
 
-Things you may want to cover:
+- Ensure gems are installed by running `bundle install` in the root directory;
+- Ensure you have Ruby 2.3+ installed;
+- In order for the **tests** to work, run `rails db:migrate`; and
+- To run tests, use: `rails test`.
 
-* Ruby version
+The tests for FriendsControllerTest were commented out due to the lack of a database table for them.
 
-* System dependencies
+Pets were generated via: `rails generate model pets nickname:string species:string`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Friends controller was generated via: `rails generate controller friends ross monica rachel phoebe chandler joey`
