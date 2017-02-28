@@ -4,3 +4,6 @@
 <%# Rendering a partial, passing the @friend instance variable to it as a
     local variable named "friend" %>
 <%= render partial: 'friend', locals: { friend: @friend } %>
+
+<%# Simple partial without local variables %>
+<%= render 'links' %>
