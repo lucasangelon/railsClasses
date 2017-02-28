@@ -5,10 +5,42 @@ class FriendsController < ApplicationController
 
   def ross
     @friend = Friend.new('Ross', 'Geller', 'Archaeologist', 'We were on a break!')
+
+
+
+    # The following segment is going to be available in the logs / console.
+    #
+    # This will raise a "TypeError" exception.
+    # Rescuing *all* exceptions is not a good practice, we are rescuing exactly
+    # what we know that can go wrong here.
+    begin
+      @friend.career += 17
+    rescue TypeError => error
+      logger.fatal "\n\nAn error has occurred: #{error.message}"
+      logger.fatal "#{error.inspect}\n"
+      logger.fatal "#{error.backtrace}\n"
+    ensure
+      logger.debug "\nFinished the Ross Begin-Rescue-Ensure section.\n"
+    end
   end
 
   def monica
     @friend = Friend.new('Monica', 'Geller', 'Chef', 'I know!')
+
+
+
+    # The following segment is going to be available in the logs / console.
+    #
+    # We can also manually raise exceptions such as "ArgumentError" in this case:
+    begin
+      raise ArgumentError, 'some argument was nil'
+    rescue ArgumentError => error
+      logger.fatal "\n\nManually raised: #{error.message}"
+      logger.fatal "#{error.inspect}\n"
+      logger.fatal "#{error.backtrace}\n"
+    ensure
+      logger.debug "\nFinished the Monica Begin-Rescue-Ensure section.\n"
+    end
   end
 
   def rachel
