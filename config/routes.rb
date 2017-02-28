@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  # The routes for the FriendsController Actions were set up for us
+  # when we ran:
+  # rails generate controller friends ross monica rachel phoebe chandler joey
   get 'friends/ross'
 
   get 'friends/monica'

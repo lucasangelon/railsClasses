@@ -1,7 +1,17 @@
+<%# This is our "friend" partial. %>
 <% if friend %>
   <h2>Character: <%= friend.first_name + ' ' + friend.last_name %></h2>
 
   <p>Career: <%= friend.career %></p>
 
   <p>Famous sentence: <%= friend.famous_sentence %></p>
+
+  <%# Debugging via inspect %>
+  <%= friend.inspect %>
+
+  <%# Debugging via Debug %>
+  <%= debug friend %>
+
+  <%# Debugging via to_yaml %>
+  <%= simple_format friend.to_yaml %>
 <% end %>

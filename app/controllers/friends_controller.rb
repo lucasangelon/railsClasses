@@ -1,4 +1,8 @@
 class FriendsController < ApplicationController
+
+  # Our actions are defined here, with this setup, every "Friends" main character
+  # could have their own unique page.
+
   def ross
     @friend = Friend.new('Ross', 'Geller', 'Archaeologist', 'We were on a break!')
   end

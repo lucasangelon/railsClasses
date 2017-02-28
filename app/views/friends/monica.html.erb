@@ -1,4 +1,6 @@
 <h1>Friends#monica</h1>
 <p>Find me in app/views/friends/monica.html.erb</p>
 
+<%# Rendering a partial, passing the @friend instance variable to it as a
+    local variable named "friend" %>
 <%= render partial: 'friend', locals: { friend: @friend } %>
