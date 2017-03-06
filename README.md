@@ -12,3 +12,6 @@ The tests for FriendsControllerTest were commented out due to the lack of a data
 Pets were generated via: `rails generate model pets nickname:string species:string`
 
 Friends controller was generated via: `rails generate controller friends ross monica rachel phoebe chandler joey`
+
+Friends model was generated via: `rails generate model friend first_name:string last_name:string career:string 
+famous_sentence:string`

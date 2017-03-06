@@ -17,3 +17,4 @@ class PetTest < ActiveSupport::TestCase
     end
   end
 end
+
