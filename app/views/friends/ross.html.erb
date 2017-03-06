@@ -5,5 +5,14 @@
     local variable named "friend" %>
 <%= render partial: 'friend', locals: { friend: @friend } %>
 
+<%# Debugging via inspect %>
+<%= @friend.inspect %>
+
+<%# Debugging via Debug %>
+<%= debug @friend %>
+
+<%# Debugging via to_yaml %>
+<%= simple_format @friend.to_yaml %>
+
 <%# Simple partial without local variables %>
 <%= render 'links' %>

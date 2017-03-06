@@ -8,14 +8,10 @@
 
   <p>Famous sentence: <%= friend.famous_sentence %></p>
 
-  <%# Debugging via inspect %>
-  <%= friend.inspect %>
-
-  <%# Debugging via Debug %>
-  <%= debug friend %>
-
-  <%# Debugging via to_yaml %>
-  <%= simple_format friend.to_yaml %>
+  <%# If there is an image_url, display the image. %>
+  <% unless friend.image_url.blank? %>
+    <%= image_tag(friend.image_url, alt: "#{friend.first_name} Photo", class: 'friend-image') %>
+  <% end %>
 <% end %>
 
 <p>Ending "Friend" Partial /\</p>

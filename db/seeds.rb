@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Friend.create(first_name: 'Phoebe', last_name: 'Buffay', career: 'Musician', famous_sentence: 'My eyes!',
+              image_url: 'https://static.businessinsider.com/image/55df18389dd7cc0f008b64cc/image.jpg')
+Friend.create(first_name: 'Janice', last_name: 'Hosenstein', career: 'Comedian', famous_sentence: 'Oh. My. God!',
+              image_url: 'http://25.media.tumblr.com/tumblr_mekyn9JpG71rv227po1_400.jpg')
