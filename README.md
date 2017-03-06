@@ -15,3 +15,7 @@ Friends controller was generated via: `rails generate controller friends ross mo
 
 Friends model was generated via: `rails generate model friend first_name:string last_name:string career:string 
 famous_sentence:string`
+
+Friends image_url field was added via: `rails generate migration add_image_url_to_friends image_url:string`
+
+Database was seeded via: `rails db:seed`
